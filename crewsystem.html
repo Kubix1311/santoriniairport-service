@@ -231,6 +231,24 @@
     }
 
     function showTable(flightCode, airline) {
-      const flight = flightData[airline][flightCode];
-      const table = document.createElement("table");
-      const thead
+  const flight = flightData[airline][flightCode];
+  const table = document.createElement("table");
+  const thead = document.createElement("thead");
+  const tbody = document.createElement("tbody");
+
+  thead.innerHTML = `<tr><th>Nick</th><th>Klasa</th></tr>`;
+
+  flight.passengers.forEach(nick => {
+    const row = document.createElement("tr");
+    row.innerHTML = `<td>${nick}</td><td>${flight.class}</td>`;
+    tbody.appendChild(row);
+  });
+
+  table.appendChild(thead);
+  table.appendChild(tbody);
+
+  const container = document.getElementById("passengerTable");
+  container.innerHTML = "";
+  container.appendChild(table);
+}
+

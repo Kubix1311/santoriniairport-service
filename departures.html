@@ -17,27 +17,27 @@
         border-collapse: collapse;
         table-layout: fixed;
         font-family: monospace;
-        font-size: 1.5vw;
+        font-size: 1.5vw; /* większa czcionka */
     }
     th, td {
-        padding: 0.7em 0;
+        padding: 0.7em 0; /* większy pionowy padding */
         text-align: center;
         vertical-align: middle;
-        border-bottom: 1px solid #333;
-        color: #FFD700;
-        background-color: #000;
     }
     th {
         background-color: #004080;
         color: white;
     }
+    td {
+        background-color: #000;
+        color: #FFD700;
+        border-bottom: 1px solid #333;
+    }
     tr:nth-child(even) td {
         background-color: #111;
     }
     td img {
-        height: 4.5vh; /* większe logo, ale nie za duże */
-        max-width: 100%;
-        object-fit: contain;
+        height: 3.5vh; /* większe logo */
     }
 </style>
 </head>
@@ -55,7 +55,7 @@
         <td>A12</td>
         <td>08:30</td>
     </tr>
-    <!-- Puste wiersze -->
+    <tr><td></td><td></td><td></td><td></td></tr>
     <tr><td></td><td></td><td></td><td></td></tr>
     <tr><td></td><td></td><td></td><td></td></tr>
     <tr><td></td><td></td><td></td><td></td></tr>

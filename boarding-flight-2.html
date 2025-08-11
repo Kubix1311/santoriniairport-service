@@ -2,18 +2,75 @@
 <html lang="pl">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lot 2</title>
-    <link rel="stylesheet" href="style.css">
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            font-family: Arial, sans-serif;
+            background-color: #0a0a0a;
+            color: #ffffff;
+            overflow: hidden;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            height: 100%;
+            padding: 1vh 2vw;
+            box-sizing: border-box;
+        }
+
+        header {
+            font-size: 3vh;
+            font-weight: bold;
+            text-align: center;
+            padding: 1vh 0;
+            width: 100%;
+            border-bottom: 2px solid #ffffff;
+        }
+
+        main {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            flex-grow: 1;
+            gap: 1vh;
+        }
+
+        .logo {
+            max-height: 20%;
+            max-width: 80%;
+            object-fit: contain;
+        }
+
+        .boarding-text {
+            font-size: 4vh;
+            font-weight: bold;
+            color: #00ff00;
+            margin-top: 2vh;
+        }
+
+        p {
+            margin: 0;
+            font-size: 2.5vh;
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
 <div class="container">
     <header>Lot 2</header>
     <main>
         <img src="assets/linie/linie2.png" alt="Linia" class="logo">
-        <p style="text-align:center;font-size:1.5em;">Flight: SX002</p>
-        <p style="text-align:center;font-size:1.2em;">Gate: A2</p>
-        <p style="text-align:center;font-size:1.2em;">Destination: Example City 2</p>
+        <p>Flight: SX002</p>
+        <p>Gate: A2</p>
+        <p>Destination: Example City 2</p>
         <div class="boarding-text">BOARDING</div>
     </main>
 </div>

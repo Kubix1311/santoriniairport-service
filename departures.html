@@ -17,19 +17,22 @@
         border-collapse: collapse;
         table-layout: fixed;
         font-family: monospace;
-        font-size: 1.4vw; /* trochę większa czcionka */
+        font-size: 1.5vw; /* większa czcionka dla całej tabeli */
+    }
+    th, td {
+        height: 6vh; /* wyższe wiersze dla wszystkich komórek */
+        padding: 0.3em;
+        text-align: center;
+        vertical-align: middle;
     }
     th {
         background-color: #004080;
         color: white;
-        padding: 0.3em;
     }
     td {
-        text-align: center;
         background-color: #000;
         color: #FFD700;
         border-bottom: 1px solid #333;
-        height: 6vh; /* trochę wyższe wiersze */
     }
     tr:nth-child(even) td {
         background-color: #111;
@@ -56,7 +59,4 @@
     <tr><td>KL741</td><td><img src="assets/klm.png" alt="KLM"></td><td>B6</td><td>10:00</td></tr>
     <tr><td>AY852</td><td><img src="assets/finnair.png" alt="Finnair"></td><td>C5</td><td>10:15</td></tr>
     <tr><td>EK963</td><td><img src="assets/emirates.png" alt="Emirates"></td><td>F4</td><td>10:30</td></tr>
-    <tr><td>QR147</td><td><img src="assets/qatar.png" alt="Qatar Airways"></td><td>G1</td><td>10:45</td></tr>
-</table>
-</body>
-</html>
+    <tr><td>QR147</td><td><img src="assets/qatar.png

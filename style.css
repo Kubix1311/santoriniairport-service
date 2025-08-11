@@ -1,64 +1,85 @@
-/* Ustalanie proporcji 3:2 dla całej strony */
+/* === USTAWIENIA GLOBALNE === */
 body {
     margin: 0;
-    background-color: white;
-    font-family: Arial, sans-serif;
+    padding: 0;
+    background-color: #000000; /* Czarne tło jak na tablicy lotniskowej */
+    color: #FFD700; /* Żółty tekst */
+    font-family: 'Arial', sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
 }
 
+/* === GŁÓWNY KONTENER === */
 .container {
-    aspect-ratio: 3 / 2;
+    aspect-ratio: 3 / 2; /* Proporcje 3:2 dla WebDisplays 2x3 */
     width: 100%;
     max-width: 1200px;
-    border: 2px solid black;
+    border: 3px solid #004080; /* Niebieska ramka */
     display: flex;
     flex-direction: column;
-    background-color: #fff;
+    justify-content: space-between;
+    align-items: center;
+    background-color: transparent;
+    padding: 2vh 2vw;
+    box-sizing: border-box;
 }
 
+/* === NAGŁÓWEK === */
 header {
-    background-color: #004080;
-    color: white;
-    padding: 10px;
+    background-color: #004080; /* Ciemnoniebieski pasek nagłówka */
+    color: #ffffff;
+    width: 100%;
     text-align: center;
-    font-size: 1.8em;
+    font-size: 6vh;
     font-weight: bold;
+    padding: 1vh 0;
+    border-bottom: 2px solid #ffffff;
 }
 
-nav {
-    background-color: #0066cc;
-    display: flex;
-    justify-content: center;
-    padding: 10px;
-}
-
-nav a {
-    color: white;
-    text-decoration: none;
-    margin: 0 15px;
-    font-weight: bold;
-}
-
-nav a:hover {
-    text-decoration: underline;
-}
-
+/* === SEKCJA GŁÓWNA === */
 main {
-    flex: 1;
-    padding: 20px;
-    overflow-y: auto;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2vh;
 }
 
+/* === LOGO LINII LOTNICZEJ === */
 .logo {
-    display: block;
-    margin: 0 auto;
-    max-width: 200px;
-    height: 150px;
+    max-height: 15vh;
+    max-width: 80%;
     object-fit: contain;
 }
+
+/* === INFORMACJE O LOCIE === */
+p {
+    margin: 0;
+    font-size: 4.5vh;
+    text-align: center;
+}
+
+/* === STATUS BOARDING === */
+.boarding-text {
+    font-size: 6vh;
+    font-weight: bold;
+    color: #00ff00;
+    text-shadow: 0 0 8px #00ff00;
+    margin-top: 2vh;
+}
+
+/* === OPCJONALNE: STYL DLA GATE CLOSED === */
+.gate-closed {
+    text-align: center;
+    font-size: 5vh;
+    font-weight: bold;
+    color: #ff0000;
+    margin-top: 2vh;
+}
+
 
 .table {
     width: 100%;

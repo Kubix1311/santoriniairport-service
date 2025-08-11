@@ -17,18 +17,31 @@
     font-family: monospace;
   }
 
-  .container {
-    width: 60vh;       /* szerokość odpowiadająca proporcji 3 względem 2 wysokości */
-    height: 40vh;      /* wysokość */
-    background-color: #000;
-    border: 2px solid #004080;
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-  }
+.container {
+  width: 60vh;       /* proporcje 3 szerokości do 2 wysokości */
+  height: 40vh;
+  background-color: #000;
+  border: 2px solid #004080;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 1vh;
+  overflow-wrap: break-word; /* pozwala na łamanie słów */
+  word-wrap: break-word;
+  word-break: break-word;
+}
+
+main p {
+  margin: 0.3vh 0;
+  font-size: 1.5em;
+  max-width: 90%; /* ograniczenie szerokości tekstu */
+  white-space: normal; /* pozwala na zawijanie tekstu */
+  line-height: 1.2em; /* trochę ciaśniejsze linie */
+}
+
 
   header {
     font-size: 2.5vh;
@@ -40,11 +53,6 @@
     max-height: 10vh;
     object-fit: contain;
     margin-bottom: 1vh;
-  }
-
-  main p {
-    margin: 0.3vh 0;
-    font-size: 1.5em;
   }
 
   .boarding-text {

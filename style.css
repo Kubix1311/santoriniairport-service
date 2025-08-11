@@ -50,11 +50,10 @@ main {
 
 /* === LOGO LINII LOTNICZEJ === */
 .logo {
-    max-height: 15vh;
-    max-width: 80%;
+    max-height: 40vh; /* wcześniej było 15vh */
+    max-width: 90%;
     object-fit: contain;
 }
-
 /* === INFORMACJE O LOCIE === */
 p {
     margin: 0;

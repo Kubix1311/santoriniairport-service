@@ -16,11 +16,11 @@
     }
 
     .container {
-      aspect-ratio: 2 / 1; /* ekran 2x1 */
+      aspect-ratio: 2 / 1;
       width: 100%;
       max-width: 1600px;
       margin: auto;
-      padding: 1vh 2vw;
+      padding: 2vh 2vw;
       box-sizing: border-box;
       display: flex;
       flex-direction: column;
@@ -28,33 +28,27 @@
       align-items: center;
     }
 
-    .navbar {
+    .navbar, .sub-navbar {
       display: flex;
       gap: 2vw;
-      margin-bottom: 2vh;
+      margin-bottom: 3vh;
       flex-wrap: wrap;
       justify-content: center;
     }
 
-    .navbar button {
+    .navbar button, .sub-navbar button {
       background-color: #004080;
       color: #fff;
       border: none;
-      padding: 1vh 2vw;
-      font-size: 2.5vh;
+      padding: 2vh 3vw;
+      font-size: 4vh;
       cursor: pointer;
-      border-radius: 5px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px #004080;
     }
 
-    .navbar button:hover {
+    .navbar button:hover, .sub-navbar button:hover {
       background-color: #0066cc;
-    }
-
-    .sub-navbar {
-      display: flex;
-      gap: 2vw;
-      margin-bottom: 2vh;
-      justify-content: center;
     }
 
     .table-container {
@@ -66,18 +60,20 @@
     table {
       width: 100%;
       border-collapse: collapse;
-      font-size: 2vh;
+      font-size: 3.5vh;
     }
 
     th, td {
       border: 1px solid #333;
-      padding: 1vh;
+      padding: 2vh;
       text-align: center;
+      height: 6vh;
     }
 
     th {
       background-color: #004080;
       color: #fff;
+      font-size: 4vh;
     }
 
     tr:nth-child(even) {
@@ -107,34 +103,115 @@
   <script>
     const flightData = {
       Ryanair: {
-        FR324: "Flexi Plus",
-        FR325: "Economy",
-        FR326: "Business"
+        FR324: {
+          class: "Economy",
+          passengers: [
+            "Quba_TV [E]", "SkyHunter", "Jetstream", "CloudSurfer", "PixelPilot",
+            "FlightMaster", "TurboTom", "WingWalker", "BlockFlyer", "RedFalcon",
+            "BlueComet", "EnderJet", "CraftCruiser", "AirJakub", "GoldenWing",
+            "ShadowFlight", "DiamondSky", "EchoPilot", "NovaFlyer", "StormRider",
+            "SkyCrafter", "BlockCaptain", "FlightFox", "JetJakub", "CloudCraze",
+            "AeroAce", "PixelFalcon", "SkyLord", "WingedWolf", "FlightKing",
+            "TurboJakub", "EnderCaptain", "JetWizard", "SkyRacer", "CloudKnight",
+            "FlightNinja", "BlockStorm", "AirWizard", "SkyJakub"
+          ]
+        },
+        FR325: {
+          class: "Economy",
+          passengers: [
+            "EcoFlyer1", "EcoFlyer2", "EcoFlyer3", "EcoFlyer4", "EcoFlyer5",
+            "EcoFlyer6", "EcoFlyer7", "EcoFlyer8", "EcoFlyer9", "EcoFlyer10",
+            "EcoFlyer11", "EcoFlyer12", "EcoFlyer13", "EcoFlyer14", "EcoFlyer15",
+            "EcoFlyer16", "EcoFlyer17", "EcoFlyer18", "EcoFlyer19", "EcoFlyer20",
+            "EcoFlyer21", "EcoFlyer22", "EcoFlyer23", "EcoFlyer24", "EcoFlyer25",
+            "EcoFlyer26", "EcoFlyer27", "EcoFlyer28", "EcoFlyer29", "EcoFlyer30",
+            "EcoFlyer31", "EcoFlyer32", "EcoFlyer33", "EcoFlyer34", "EcoFlyer35",
+            "EcoFlyer36", "EcoFlyer37", "EcoFlyer38", "EcoFlyer39", "EcoFlyer40"
+          ]
+        },
+        FR326: {
+          class: "Business",
+          passengers: [
+            "BizBoss1", "BizBoss2", "BizBoss3", "BizBoss4", "BizBoss5",
+            "BizBoss6", "BizBoss7", "BizBoss8", "BizBoss9", "BizBoss10",
+            "BizBoss11", "BizBoss12", "BizBoss13", "BizBoss14", "BizBoss15",
+            "BizBoss16", "BizBoss17", "BizBoss18", "BizBoss19", "BizBoss20",
+            "BizBoss21", "BizBoss22", "BizBoss23", "BizBoss24", "BizBoss25",
+            "BizBoss26", "BizBoss27", "BizBoss28", "BizBoss29", "BizBoss30",
+            "BizBoss31", "BizBoss32", "BizBoss33", "BizBoss34", "BizBoss35",
+            "BizBoss36", "BizBoss37", "BizBoss38", "BizBoss39", "BizBoss40"
+          ]
+        }
       },
       Lufthansa: {
-        LH101: "Business",
-        LH102: "Economy",
-        LH103: "Premium Economy"
+        LH101: {
+          class: "Business",
+          passengers: [/* wpisz swoje 40 nicków */]
+        },
+        LH102: {
+          class: "Economy",
+          passengers: [/* wpisz swoje 40 nicków */]
+        },
+        LH103: {
+          class: "Premium Economy",
+          passengers: [/* wpisz swoje 40 nicków */]
+        }
       },
       Emirates: {
-        EK201: "First",
-        EK202: "Business",
-        EK203: "Economy"
+        EK201: {
+          class: "First",
+          passengers: [/* wpisz swoje 40 nicków */]
+        },
+        EK202: {
+          class: "Business",
+          passengers: [/* wpisz swoje 40 nicków */]
+        },
+        EK203: {
+          class: "Economy",
+          passengers: [/* wpisz swoje 40 nicków */]
+        }
       },
       LOT: {
-        LO301: "Business",
-        LO302: "Economy",
-        LO303: "Premium"
+        LO301: {
+          class: "Business",
+          passengers: [/* wpisz swoje 40 nicków */]
+        },
+        LO302: {
+          class: "Economy",
+          passengers: [/* wpisz swoje 40 nicków */]
+        },
+        LO303: {
+          class: "Premium",
+          passengers: [/* wpisz swoje 40 nicków */]
+        }
       },
       WizzAir: {
-        WZ401: "Economy",
-        WZ402: "Wizz Plus",
-        WZ403: "Business"
+        WZ401: {
+          class: "Economy",
+          passengers: [/* wpisz swoje 40 nicków */]
+        },
+        WZ402: {
+          class: "Wizz Plus",
+          passengers: [/* wpisz swoje 40 nicków */]
+        },
+        WZ403: {
+          class: "Business",
+          passengers: [/* wpisz swoje 40 nicków */]
+        }
       },
       KLM: {
-        KL501: "Economy",
-        KL502: "Business",
-        KL503: "Premium"
+        KL501: {
+          class: "Economy",
+          passengers: [/* wpisz swoje 40 nicków */]
+        },
+        KL502: {
+          class: "Business",
+          passengers: [/* wpisz swoje 40 nicków */]
+        },
+        KL503: {
+          class: "Premium",
+          passengers: [/* wpisz swoje 40 nicków */]
+        }
       }
     };
 
@@ -143,37 +220,17 @@
       const subNav = document.getElementById("flights");
       subNav.innerHTML = "";
 
-      for (const flight in flights) {
+      for (const flightCode in flights) {
         const btn = document.createElement("button");
-        btn.textContent = flight;
-        btn.onclick = () => showTable(flight, flights[flight]);
+        btn.textContent = flightCode;
+        btn.onclick = () => showTable(flightCode, name);
         subNav.appendChild(btn);
       }
 
       document.getElementById("passengerTable").innerHTML = "";
     }
 
-    function showTable(flight, travelClass) {
+    function showTable(flightCode, airline) {
+      const flight = flightData[airline][flightCode];
       const table = document.createElement("table");
-      const thead = document.createElement("thead");
-      const tbody = document.createElement("tbody");
-
-      thead.innerHTML = `<tr><th>Imię i nazwisko</th><th>Klasa</th></tr>`;
-
-      for (let i = 1; i <= 40; i++) {
-        const row = document.createElement("tr");
-        const name = `Gracz ${i}`;
-        row.innerHTML = `<td>${name}</td><td>${travelClass}</td>`;
-        tbody.appendChild(row);
-      }
-
-      table.appendChild(thead);
-      table.appendChild(tbody);
-
-      const container = document.getElementById("passengerTable");
-      container.innerHTML = "";
-      container.appendChild(table);
-    }
-  </script>
-</body>
-</html>
+      const thead

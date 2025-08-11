@@ -1,0 +1,237 @@
+/* Ustalanie proporcji 3:2 dla całej strony */
+body {
+    margin: 0;
+    background-color: white;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    aspect-ratio: 3 / 2;
+    width: 100%;
+    max-width: 1200px;
+    border: 2px solid black;
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+}
+
+header {
+    background-color: #004080;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    font-size: 1.8em;
+    font-weight: bold;
+}
+
+nav {
+    background-color: #0066cc;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+main {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+.logo {
+    display: block;
+    margin: 0 auto;
+    max-width: 200px;
+    height: 150px;
+    object-fit: contain;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table th, .table td {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: center;
+}
+
+.boarding-text {
+    color: green;
+    font-size: 2em;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.gate-closed {
+    text-align: center;
+    font-size: 2em;
+    font-weight: bold;
+    color: #004080;
+}
+
+.table-airport {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+    font-family: monospace;
+    font-size: 1em;
+}
+
+.table-airport th, .table-airport td {
+    border: 1px solid black;
+    padding: 4px;
+    text-align: center;
+    height: 28px; /* wąskie wiersze */
+}
+
+.table-airport th {
+    background-color: #222;
+    color: #fff;
+}
+
+.table-airport td img.logo {
+    height: 24px;
+    width: auto;
+}
+
+.table-airport {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+    font-family: monospace;
+    font-size: 1em;
+}
+
+.table-airport th {
+    background-color: #004080; /* ciemny niebieski nagłówek */
+    color: #fff;
+    padding: 6px;
+}
+
+.table-airport td {
+    padding: 4px;
+    text-align: center;
+    height: 28px;
+    background-color: #000; /* czarne tło wierszy */
+    color: #FFD700; /* żółty tekst */
+    border-bottom: 1px solid #333;
+}
+
+.table-airport tr:nth-child(even) td {
+    background-color: #111; /* lekko jaśniejszy czarny dla parzystych */
+}
+
+.table-airport td img.logo {
+    height: 24px;
+    width: auto;
+}
+
+.delete-container {
+    background-color: #004080; /* niebieskie tło */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    position: relative;
+}
+
+.delete-logo {
+    max-width: 200px;
+    height: auto;
+    object-fit: contain;
+}
+
+.delete-text {
+    position: absolute;
+    bottom: 40px;
+    font-size: 2.5em;
+    font-weight: bold;
+    color: black; /* czarny napis */
+    text-align: center;
+}
+
+.table-airport {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+    font-family: monospace;
+    font-size: 1em;
+}
+
+.table-airport th {
+    background-color: #004080;
+    color: #fff;
+    padding: 6px;
+}
+
+.table-airport td {
+    padding: 4px;
+    text-align: center;
+    height: 28px;
+    background-color: #000;
+    color: #FFD700;
+    border-bottom: 1px solid #333;
+}
+
+.table-airport tr:nth-child(even) td {
+    background-color: #111;
+}
+
+.table-airport td img.logo {
+    height: 24px;
+    width: auto;
+}
+
+body {
+    background-color: #004080; /* dopasowany do navbara */
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    background-color: transparent; /* brak białego tła */
+}
+
+body {
+    background-color: #000000; /* Czarne tło */
+    margin: 0;
+    padding: 0;
+    color: #FFD700; /* Żółty tekst dla domyślnego tekstu */
+}
+
+.container {
+    background-color: transparent; /* Bez białego tła */
+}
+
+.table-airport th {
+    background-color: #004080; /* Niebieski nagłówek jak na tablicy */
+    color: #ffffff;
+}
+
+.table-airport td {
+    background-color: #000000; /* Czarne tło komórek */
+    color: #FFD700; /* Żółty tekst */
+    border-bottom: 1px solid #333333;
+}
+
+.table-airport tr:nth-child(even) td {
+    background-color: #111111; /* Ciemnoszare tło dla parzystych wierszy */
+}

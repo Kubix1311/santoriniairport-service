@@ -1,15 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gate Closed</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gate Closed</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #000;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      font-family: 'Arial', sans-serif;
+    }
+
+    .container {
+      text-align: center;
+    }
+
+    .delete-logo {
+      max-width: 400px;
+      margin-bottom: 40px;
+    }
+
+    .delete-text {
+      font-size: 12vh;
+      color: #fff;
+      font-weight: bold;
+      letter-spacing: 1vh;
+      text-transform: uppercase;
+      background-color: #800000;
+      padding: 4vh 6vw;
+      border-radius: 20px;
+      box-shadow: 0 0 30px #800000;
+      display: inline-block;
+      animation: blink 1s infinite;
+    }
+
+    @keyframes blink {
+      0%, 100% {
+        opacity: 1;
+        box-shadow: 0 0 30px #800000;
+      }
+      50% {
+        opacity: 0.4;
+        box-shadow: 0 0 10px #400000;
+      }
+    }
+  </style>
 </head>
 <body>
-<div class="container delete-container">
+  <div class="container">
     <img src="https://santorini-international-airport.com/wp-content/uploads/2023/02/santorini-airport-logo.png" alt="Airport Logo" class="delete-logo">
     <div class="delete-text">GATE CLOSED</div>
-</div>
+  </div>
 </body>
 </html>

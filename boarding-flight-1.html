@@ -1,21 +1,71 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lot 1</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Lot 1</title>
+<style>
+  html, body {
+    margin: 0; 
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    color: #FFD700;
+    font-family: monospace;
+  }
+
+  .container {
+    width: 60vh;       /* szerokość odpowiadająca proporcji 3 względem 2 wysokości */
+    height: 40vh;      /* wysokość */
+    background-color: #000;
+    border: 2px solid #004080;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  header {
+    font-size: 2.5vh;
+    font-weight: bold;
+    margin-bottom: 1vh;
+  }
+
+  .logo {
+    max-height: 10vh;
+    object-fit: contain;
+    margin-bottom: 1vh;
+  }
+
+  main p {
+    margin: 0.3vh 0;
+    font-size: 1.5em;
+  }
+
+  .boarding-text {
+    margin-top: 2vh;
+    font-size: 2vh;
+    font-weight: bold;
+    color: #FFD700;
+    letter-spacing: 0.2em;
+  }
+</style>
 </head>
 <body>
 <div class="container">
-    <header>KRAKOW</header>
-    <main>
-        <img src="https://download.logo.wine/logo/Ryanair/Ryanair-Logo.wine.png" alt="Linia" class="logo">
-        <p style="text-align:center;font-size:1.5em;">Flight: FR 324</p>
-        <p style="text-align:center;font-size:1.2em;">Gate: 3</p>
-        <p style="text-align:center;font-size:1.2em;">Destination: Krakow</p>
-        <div class="boarding-text">BOARDING</div>
-    </main>
+  <header>KRAKOW</header>
+  <main>
+    <img src="https://download.logo.wine/logo/Ryanair/Ryanair-Logo.wine.png" alt="Linia" class="logo">
+    <p>Flight: FR 324</p>
+    <p>Gate: 3</p>
+    <p>Destination: Krakow</p>
+    <div class="boarding-text">BOARDING</div>
+  </main>
 </div>
 </body>
 </html>
